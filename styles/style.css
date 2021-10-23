@@ -302,4 +302,47 @@ nav ul li .highlight {
 
 header {
   background-color: #f6a823;
+  height: 80vh;
+}
+
+.headerContent {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.headerContent .imgContainer {
+  height: 500px;
+  width: 400px;
+}
+.headerContent .imgContainer img {
+  -webkit-box-shadow: 15px 15px 1px white;
+          box-shadow: 15px 15px 1px white;
+}
+
+.titleContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.titleContainer h1 {
+  font-size: 5rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Lora", serif;
+  text-transform: uppercase;
+}
+.titleContainer img {
+  height: 100px;
+  width: 165px;
+  position: absolute;
+  top: 0;
+  left: -40px;
 }
