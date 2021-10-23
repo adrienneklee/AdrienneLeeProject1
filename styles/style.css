@@ -226,6 +226,16 @@ html {
   overflow: hidden;
 }
 
+h2 {
+  font-size: 2.1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
 h3 {
   font-size: 1.6rem;
   color: #2c2c2c;
@@ -293,6 +303,16 @@ button {
   margin-top: 10px;
 }
 
+h2 {
+  font-size: 2.1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
 h3 {
   font-size: 1.6rem;
   color: #2c2c2c;
@@ -310,6 +330,16 @@ p {
   letter-spacing: 1px;
   font-weight: normal;
   line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
 }
 
 h3 {
@@ -436,15 +466,6 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.bioSection h2 {
-  font-size: 2.1rem;
-  color: #2c2c2c;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 10px 0;
-}
 
 .aboutSection {
   height: 100vh;
@@ -470,4 +491,108 @@ header {
 }
 .aboutSection .textContainer h3 {
   margin: 10px 0;
+}
+
+.iconBox {
+  height: 50px;
+  width: 50px;
+  background-color: #f6a823;
+  border: none;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.iconBox i {
+  text-align: center;
+  font-size: 20px;
+}
+
+.servicesSection {
+  margin-top: 50px;
+}
+.servicesSection .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.servicesSection .flexContainer .container {
+  width: calc(50% - 50px);
+  margin: 0px 20px 20px;
+}
+
+.imgBreak {
+  background-image: url(..//../assets/home-image-4.jpg);
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.journeySection {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.journeySection aside {
+  width: 33%;
+}
+.journeySection aside img {
+  -webkit-box-shadow: 15px 15px 1px #f6a823;
+          box-shadow: 15px 15px 1px #f6a823;
+}
+.journeySection article {
+  width: 66%;
+}
+
+.gallery {
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  margin-top: 50px;
+  border: 1px solid red;
+}
+.gallery ul {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gallery ul li {
+  width: calc(100%/3 - 10px);
+}
+
+footer {
+  background-color: #4f4f4f;
+  text-align: center;
+}
+footer p {
+  color: white;
 }

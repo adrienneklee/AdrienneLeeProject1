@@ -53,11 +53,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h2 {
-        @include fontSize(2.1rem);
-        text-transform: uppercase;
-        margin: 10px 0;
-    }
 }
 .aboutSection {
     height: 100vh;
@@ -79,6 +74,83 @@ header {
         }
     }
 
+    .iconBox {
+        height: 50px;
+        width: 50px;
+        background-color: $primary;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+.servicesSection {
+    margin-top: 50px;
+    .flexContainer {
+        display: flex;
+        .container {
+            width: calc(50% - 50px);
+            margin: 0px 20px 20px;
+        }
+    }
+}
+
+.imgBreak {
+    background-image: url(..//../assets/home-image-4.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.journeySection {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    aside {
+        width: 33%;
+        img {
+            box-shadow: 15px 15px 1px $primary;
+        }
+    }
+    article {
+        width: 66%;
+    }
+}
+
+.gallery {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    margin-top: 50px;
+    border: 1px solid red;
+        ul {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: calc(100%/3 - 10px);
+        }
+    }
+}
+
+footer {
+    background-color: $accentGrey;
+    text-align: center;
+    p {
+        color: white;
+    }
+}
 
 
     

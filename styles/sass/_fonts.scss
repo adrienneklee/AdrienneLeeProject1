@@ -6,6 +6,12 @@
     letter-spacing: 1px;
 }
 
+h2 {
+        @include fontSize(2.1rem);
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
 h3 {
     @include fontSize(1.6rem);
     text-transform: uppercase;
