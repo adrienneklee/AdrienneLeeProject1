@@ -5,6 +5,7 @@ nav {
     ul {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         li {
             @include fontSize(1rem);
             line-height: 1.45rem;

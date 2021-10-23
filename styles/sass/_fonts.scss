@@ -5,3 +5,14 @@
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+h3 {
+    @include fontSize(1.6rem);
+    text-transform: uppercase;
+}
+
+p {
+    @include fontSize(1rem);
+    font-weight: normal;
+    line-height: 1.6;
+}

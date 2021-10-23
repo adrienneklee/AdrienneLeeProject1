@@ -1,4 +1,5 @@
 @import "colorPalette";
+@import "fonts";
 * {
     box-sizing: border-box;
     padding: 0;
@@ -13,6 +14,7 @@ html {
 
 body {
     font-size: 16px;
+    background-color: $accentWhite;
 }
 
 ul, li {
@@ -22,11 +24,21 @@ ul, li {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     display: block;
 }
 
 a {
     text-decoration: none;
     color: $fontColor;
+}
+
+button {
+    @include fontSize(1rem);
+    line-height: 1.6rem;
+    background-color: $secondary;
+    color: $fontColor;
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
 }

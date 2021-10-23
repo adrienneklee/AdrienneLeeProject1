@@ -226,6 +226,25 @@ html {
   overflow: hidden;
 }
 
+h3 {
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -241,6 +260,7 @@ html {
 
 body {
   font-size: 16px;
+  background-color: #f0efed;
 }
 
 ul, li {
@@ -250,13 +270,65 @@ ul, li {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
 
 a {
   text-decoration: none;
   color: #2c2c2c;
+}
+
+button {
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+  background-color: #05afc1;
+  color: #2c2c2c;
+  width: 200px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 1.6;
 }
 
 nav {
@@ -269,6 +341,9 @@ nav ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 nav ul li {
   font-size: 1rem;
@@ -302,7 +377,7 @@ nav ul li .highlight {
 
 header {
   background-color: #f6a823;
-  height: 80vh;
+  height: 85vh;
 }
 
 .headerContent {
@@ -336,6 +411,7 @@ header {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
+  line-height: 4.6rem;
   font-family: "Lora", serif;
   text-transform: uppercase;
 }
@@ -345,4 +421,53 @@ header {
   position: absolute;
   top: 0;
   left: -40px;
+}
+
+.bioSection {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bioSection h2 {
+  font-size: 2.1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.aboutSection {
+  height: 100vh;
+}
+.aboutSection .aboutFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+}
+.aboutSection .aboutFlexContainer .imgContainer {
+  width: 50%;
+}
+.aboutSection .textContainer {
+  width: 50%;
+  padding: 50px;
+}
+.aboutSection .textContainer h3 {
+  margin: 10px 0;
 }
