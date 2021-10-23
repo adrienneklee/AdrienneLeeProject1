@@ -1,9 +1,18 @@
+@import "colorPalette";
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     max-width: 100%;
     border: 1px solid grey;
+}
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-size: 16px;
 }
 
 ul, li {
@@ -15,4 +24,9 @@ ul, li {
 img {
     width: 100%;
     display: block;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
 }

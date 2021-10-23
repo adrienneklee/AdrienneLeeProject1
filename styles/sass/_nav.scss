@@ -1,0 +1,23 @@
+@import "fonts";
+nav {
+    width: 50%;
+    margin: 0 auto;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+            @include fontSize(1rem);
+            line-height: 1.45rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px;
+            .highlight {
+                color: $accentWhite;
+                }
+            }
+        }
+    }
+.logo {
+    @include fontSize(2rem);
+    font-family: "Lora", serif;
+}

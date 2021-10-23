@@ -1,3 +1,7 @@
-html {
-    font-size: 125%;
+@mixin fontSize ($sizeValue) {
+    font-size: $sizeValue;
+    color: $fontColor;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
