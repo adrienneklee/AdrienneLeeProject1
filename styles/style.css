@@ -516,17 +516,16 @@ nav ul li .highlight {
   font-family: "Lora", serif;
 }
 
-.headerBlog {
-  height: 50vh;
-  background-image: url(../../assets/blog-image-1.jpg);
+header.headerBlog .background {
+  background-image: url("../assets/blog-image-1.jpg");
+  height: 40vh;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
-.headerBlog h1 {
+header.headerBlog .background h1 {
   font-size: 3rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
@@ -535,7 +534,7 @@ nav ul li .highlight {
   font-family: "Lora", serif;
   position: absolute;
   bottom: -90px;
-  left: 50px;
+  left: 140px;
 }
 
 .blogContainer {
@@ -623,17 +622,16 @@ aside li {
   margin-left: 33%;
 }
 
-.headerContact {
-  height: 50vh;
-  background-image: url(../../assets/blog-image-1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+header.headerContact .background {
+  background-image: url("../assets/contact-image-1.jpg");
   background-size: cover;
+  background-position: center;
+  height: 40vh;
   position: relative;
   bottom: 0;
   left: 0;
 }
-.headerContact h1 {
+header.headerContact .background h1 {
   font-size: 3rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;

@@ -1,19 +1,19 @@
-.headerBlog {
-    height: 50vh;
-    background-image: url(../../assets/blog-image-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: 0;
-    left: 0;
-
-    h1 {
-        @include fontSize (3rem);
-        font-family: "Lora", serif;
-        position: absolute;
-        bottom: -90px;
-        left: 50px;
+header.headerBlog {
+    .background {
+        background-image: url("../assets/blog-image-1.jpg");
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        h1 {
+            @include fontSize(3rem);
+            font-family: "Lora", serif;
+            position: absolute;
+            bottom: -90px;
+            left: 140px;
+        }
     }
 }
 
