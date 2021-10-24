@@ -21,19 +21,19 @@
 
 <body>
     <header class="headerContact">
-        <div class="wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#Home" class="">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><p class="logo">Sophie</p></li>
-                    <li><a href="#Blog">Blog</a></li>
-                    <li><a href="#Contact" class="highlight">Contact</a></li>
-                </ul>
-            </nav>
-            <h1>Get In Touch</h1>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#Home" class="">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><p class="logo">Sophie</p></li>
+                <li><a href="#Blog">Blog</a></li>
+                <li><a href="#Contact" class="highlight">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Get In Touch</h1>
     </header>
+
+    <div class="wrapper">
     <main class="contactContainer">
         <aside>
             <div class="iconContainer">
@@ -44,26 +44,27 @@
             </div>
 
             <p>info@email.com</p>
+            <a href="tel:1234567890">123-456-7890</a>
             <address>123 Queen Street West, Unit 10</address>
             <address>Toronto, Ontario</address>
             <address>M5V2O5</address>
         </aside>
 
-        <form action="Contact Form">
-            <fieldset>
-                <label for="userName" class="srOnly">Name</label>
-                <input type="name" id="userName" placeholder="Name">
-            
-                <label for="email" class="srOnly">Email address</label>
-                <input type="email" id="email" placeholder="Email address">
-            
-                <label for="message" class="srOnly">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="textarea" id="message" placeholder="Message">
-            </fieldset>
+        <form class="formContainer" action="#">
+        
+            <label for="userName" class="srOnly">Name</label>
+            <input type="text" id="userName" name="name" placeholder="Name">
+        
+            <label for="email" class="srOnly">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address">
+        
+            <label for="comment" class="srOnly">Comment</label>
+            <textarea name="comment" id="comment" cols="70" rows="10" placeholder="Message"></textarea>
+        
             <button type="submit">Submit</button>
         </form>
     </main>
+    </div> <!-- end of wrapper -->
     <footer>
         <p>Copyright © 2018 HackerYou</p>
     </footer>

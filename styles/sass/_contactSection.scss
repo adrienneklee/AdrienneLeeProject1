@@ -1,6 +1,6 @@
 .headerContact {
     height: 50vh;
-    background-image: url(../../assets/contact-image-1.jpg);
+    background-image: url(../../assets/blog-image-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,5 +12,44 @@
         font-family: "Lora", serif;
         position: absolute;
         bottom: -90px;
+        left: 140px;
     }
 }
+
+.contactContainer {
+    height: 50vh;
+    margin: 50px 0 25px;
+    display: flex;
+}
+
+aside {
+    width: calc(100%/3 - 50px);
+    height: 35vh;
+    padding: 40px 20px;
+    margin-right: 50px;
+    background-color: white;
+    i {
+        color: $primary;
+        font-size: 1.2rem;
+        padding: 10px 15px 10px 0;
+    }
+    a {
+        @include fontSize(0.8rem);
+        font-weight: normal;
+        margin-top: 5px;
+    }
+    address {
+        @include fontSize(0.8rem);
+        font-weight: normal;
+        font-style: normal;
+        margin-top: 5px; 
+    }
+}
+
+.formContainer {
+    width: calc(100%/3 * 2);
+    margin: 0 auto;
+    padding: 0;
+
+}
+

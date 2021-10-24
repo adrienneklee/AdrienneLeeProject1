@@ -256,6 +256,15 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1.2rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 1rem;
   color: #2c2c2c;
@@ -363,6 +372,15 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: 1.2rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 1rem;
   color: #2c2c2c;
@@ -415,6 +433,15 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.2rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -489,7 +516,6 @@ nav ul li .highlight {
   font-family: "Lora", serif;
 }
 
-/* Blog Page Styles */
 .headerBlog {
   height: 50vh;
   background-image: url(../../assets/blog-image-1.jpg);
@@ -529,20 +555,47 @@ nav ul li .highlight {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33%;
-  padding: 20px;
 }
 .blogContainer article {
   margin-left: 20px;
   padding: 20px;
   width: calc(66% - 20px);
+  background-color: white;
   border-bottom: 4px solid #f6a823;
+}
+
+.asideFlex {
+  width: 33%;
+  padding: 20px;
+}
+.asideFlex aside {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+h4 {
+  margin-top: 10px;
+}
+
+aside li {
+  list-style-type: circle;
+  list-style-position: inside;
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  margin-top: 10px;
 }
 
 .reviewContainer {
   width: 66%;
   margin-top: 25px;
   margin-left: 33%;
+  background-color: white;
   border-bottom: 5px solid #f6a823;
 }
 .reviewContainer .jeremy {
@@ -572,7 +625,7 @@ nav ul li .highlight {
 
 .headerContact {
   height: 50vh;
-  background-image: url(../../assets/contact-image-1.jpg);
+  background-image: url(../../assets/blog-image-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -589,6 +642,53 @@ nav ul li .highlight {
   font-family: "Lora", serif;
   position: absolute;
   bottom: -90px;
+  left: 140px;
+}
+
+.contactContainer {
+  height: 50vh;
+  margin: 50px 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+aside {
+  width: calc(100%/3 - 50px);
+  height: 35vh;
+  padding: 40px 20px;
+  margin-right: 50px;
+  background-color: white;
+}
+aside i {
+  color: #f6a823;
+  font-size: 1.2rem;
+  padding: 10px 15px 10px 0;
+}
+aside a {
+  font-size: 0.8rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+aside address {
+  font-size: 0.8rem;
+  color: #2c2c2c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 5px;
+}
+
+.formContainer {
+  width: calc(100%/3 * 2);
+  margin: 0 auto;
+  padding: 0;
 }
 
 form {
