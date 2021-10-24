@@ -1,0 +1,66 @@
+/* Blog Page Styles */
+.headerBlog {
+    height: 50vh;
+    background-image: url(../../assets/blog-image-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    h1 {
+        @include fontSize (3rem);
+        font-family: "Lora", serif;
+        position: absolute;
+        bottom: -90px;
+        left: 50px;
+    }
+}
+
+.blogContainer {
+    margin-top: 50px;
+    display: flex;
+    .asideFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        padding: 20px;
+    }
+    article {
+        margin-left: 20px;
+        padding: 20px;
+        width: calc(66% - 20px);
+        border-bottom: 4px solid $primary;
+    }
+}
+
+.reviewContainer {
+    width: 66%;
+    margin-top: 25px;
+    margin-left: 33%;
+    border-bottom: 5px solid $primary;
+
+
+    .jeremy {
+        display: flex;
+        .imgContainer {
+            width: 30%;
+            padding: 10px;
+        }
+    }
+    .julia {
+        display: flex;
+        .imgContainer {
+            width: 30%;
+            padding: 10px;
+        }
+    }
+}
+
+.formContainer {
+    width: 66%;
+    margin-top: 25px;
+    margin-left: 33%;
+}

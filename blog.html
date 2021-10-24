@@ -18,7 +18,7 @@
 
 <body>
     <header class="headerBlog">
-        <div class="wrapper">
+        <!-- <div class="wrapper"> -->
             <nav>
                 <ul>
                     <li><a href="#Home" class="">Home</a></li>
@@ -29,7 +29,7 @@
                 </ul>
             </nav>
             <h1>Blog</h1>
-        </div>
+        <!-- </div> -->
     </header>
 
     <main>
@@ -98,21 +98,21 @@
                 </div>
             </article>
         </section>
+    
+        <form class="formContainer" action="#">
+            
+            <label for="userName" class="srOnly">Name</label>
+            <input type="text" id="userName"  name="name" placeholder="Name">
+
+            <label for="email" class="srOnly">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Email address">
+
+            <label for="comment" class="srOnly">Comment</label>
+            <textarea name="comment" id="comment" cols="70" rows="10" placeholder="Comment"></textarea>
+        
+            <button type="submit">Post Comment</button>
+        </form> 
     </div> <!-- wrapper closer -->
-            <form action="Comment Form">
-                <fieldset>
-                    <label for="userName" class="srOnly">Name</label>
-                    <input type="name" id="userName" placeholder="Name">
-
-                    <label for="email" class="srOnly">Email address</label>
-                    <input type="email" id="email" placeholder="Email address">
-
-                    <label for="comment" class="srOnly">Comment</label>
-                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
-                </fieldset>
-                <button type="submit">Post Comment</button>
-            </form> 
-        </div>
     </main>
 
     <footer>

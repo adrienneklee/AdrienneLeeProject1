@@ -452,15 +452,15 @@ span {
 }
 
 nav {
-  width: 80%;
-  margin: 0 auto;
+  background-color: #f6a823;
 }
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -474,7 +474,7 @@ nav ul li {
   line-height: 1.45rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 nav ul li .highlight {
   color: #f0efed;
@@ -489,6 +489,7 @@ nav ul li .highlight {
   font-family: "Lora", serif;
 }
 
+/* Blog Page Styles */
 .headerBlog {
   height: 50vh;
   background-image: url(../../assets/blog-image-1.jpg);
@@ -496,7 +497,7 @@ nav ul li .highlight {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 .headerBlog h1 {
@@ -508,6 +509,65 @@ nav ul li .highlight {
   font-family: "Lora", serif;
   position: absolute;
   bottom: -90px;
+  left: 50px;
+}
+
+.blogContainer {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blogContainer .asideFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 33%;
+  padding: 20px;
+}
+.blogContainer article {
+  margin-left: 20px;
+  padding: 20px;
+  width: calc(66% - 20px);
+  border-bottom: 4px solid #f6a823;
+}
+
+.reviewContainer {
+  width: 66%;
+  margin-top: 25px;
+  margin-left: 33%;
+  border-bottom: 5px solid #f6a823;
+}
+.reviewContainer .jeremy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reviewContainer .jeremy .imgContainer {
+  width: 30%;
+  padding: 10px;
+}
+.reviewContainer .julia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reviewContainer .julia .imgContainer {
+  width: 30%;
+  padding: 10px;
+}
+
+.formContainer {
+  width: 66%;
+  margin-top: 25px;
+  margin-left: 33%;
 }
 
 .headerContact {
@@ -529,6 +589,30 @@ nav ul li .highlight {
   font-family: "Lora", serif;
   position: absolute;
   bottom: -90px;
+}
+
+form {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px 0px;
+}
+
+input {
+  width: calc(50% - 10px);
+  margin-right: 5px;
+  padding: 10px;
+  font-style: italic;
+}
+
+textarea {
+  width: calc(100% - 10px);
+  margin-top: 10px;
+  padding: 10px;
+  font-style: italic;
+}
+
+button [type=submit] {
+  width: 100%;
 }
 
 .wrapper {
@@ -736,55 +820,4 @@ footer {
 }
 footer p {
   color: white;
-}
-
-/* Blog Page Styles */
-.blogContainer {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.blogContainer .asideFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 33%;
-  padding: 20px;
-}
-.blogContainer article {
-  margin-left: 20px;
-  padding: 20px;
-  width: calc(66% - 20px);
-  border-bottom: 4px solid #f6a823;
-}
-
-.reviewContainer {
-  width: 66%;
-  margin-top: 25px;
-}
-.reviewContainer .jeremy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.reviewContainer .jeremy .imgContainer {
-  width: 30%;
-  padding: 10px;
-}
-.reviewContainer .julia {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.reviewContainer .julia .imgContainer {
-  width: 30%;
-  padding: 10px;
 }

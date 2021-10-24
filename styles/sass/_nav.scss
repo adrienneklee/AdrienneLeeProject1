@@ -1,17 +1,16 @@
 @import "fonts";
 nav {
-    width: 80%;
-    margin: 0 auto;
+    background-color: $primary;
     ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         li {
             @include fontSize(1rem);
             line-height: 1.45rem;
             text-transform: uppercase;
             text-align: center;
-            padding: 20px;
+            padding: 10px 20px;
             .highlight {
                 color: $accentWhite;
                 }

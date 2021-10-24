@@ -3,7 +3,9 @@
 @import "fonts";
 @import "colorPalette";
 @import "nav";
-@import "headerStyles";
+@import "blogSection";
+@import "contactSection";
+@import "form";
 
 .wrapper {
     max-width: 1200px;
@@ -181,46 +183,7 @@ footer {
     }
 }
 
-/* Blog Page Styles */
 
-.blogContainer {
-    margin-top: 50px;
-    display: flex;
-    .asideFlex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 33%;
-        padding: 20px;
-    }
-    article {
-        margin-left: 20px;
-        padding: 20px;
-        width: calc(66% - 20px);
-        border-bottom: 4px solid $primary;
-    }
-}
-
-.reviewContainer {
-    width: 66%;
-    margin-top: 25px;
-
-
-    .jeremy {
-        display: flex;
-        .imgContainer {
-            width: 30%;
-            padding: 10px;
-        }
-    }
-    .julia {
-        display: flex;
-        .imgContainer {
-            width: 30%;
-            padding: 10px;
-        }
-    }
-}
 
 
 
