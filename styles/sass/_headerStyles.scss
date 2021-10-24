@@ -1,0 +1,33 @@
+.headerBlog {
+    height: 50vh;
+    background-image: url(../../assets/blog-image-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    h1 {
+        @include fontSize (3rem);
+        font-family: "Lora", serif;
+        position: absolute;
+        bottom: -90px;
+    }
+}
+
+.headerContact {
+    height: 50vh;
+    background-image: url(../../assets/contact-image-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    h1 {
+        @include fontSize (3rem);
+        font-family: "Lora", serif;
+        position: absolute;
+        bottom: -90px;
+    }
+}

@@ -3,6 +3,7 @@
 @import "fonts";
 @import "colorPalette";
 @import "nav";
+@import "headerStyles";
 
 .wrapper {
     max-width: 1200px;
@@ -10,7 +11,8 @@
     margin: 0 auto;
 }
 
-header {
+/* Main Page Styles */
+.headerMain {
     background-color: $primary;
     height: 85vh;
 }
@@ -33,12 +35,6 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    h1 {
-        @include fontSize(5rem);
-        line-height: 4.6rem;
-        font-family: "Lora", serif;
-        text-transform: uppercase;
-    }
     img {
         height: 100px;
         width: 165px;
@@ -53,7 +49,11 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+        p {
+            width: 80%;
+        }
 }
+
 .aboutSection {
     height: 100vh;
     .aboutFlexContainer {
@@ -63,31 +63,59 @@ header {
         height: 50%;
         .imgContainer {
             width: 50%;
-            }
-        }
-        .textContainer {
-            width: 50%;
-            padding: 50px;
-            h3 {
-                margin: 10px 0;
+            height: 40vh;
+            background-color: $accentRust;
+            position: relative;
+            top: 0;
+            left: 0;
+            img {
+                width: 80%;
+                position: absolute;
+                top: -20px;
+                right: 15px;
+                }
             }
         }
     }
 
-    .iconBox {
-        height: 50px;
-        width: 50px;
-        background-color: $primary;
-        border: none;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        i {
-            text-align: center;
-            font-size: 20px;
-        }
+// .travelled {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     p {
+//         text-align: left;
+//     }
+//     .imgContainer {
+//         height: 40vh;
+//         background-color: $primary;
+//         img {
+//             left: -20px;
+//         }
+//     }
+// }
+
+.textContainer {
+    width: 50%;
+    padding: 50px;
+    h3 {
+        margin: 10px 0;
     }
+}
+
+.iconBox {
+    height: 50px;
+    width: 50px;
+    background-color: $primary;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        text-align: center;
+        font-size: 20px;
+    }
+}
 
 .servicesSection {
     margin-top: 50px;
@@ -105,7 +133,7 @@ header {
     height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     margin-top: 50px;
 }
@@ -115,6 +143,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
     aside {
         width: 33%;
         img {
@@ -129,17 +158,17 @@ header {
 .gallery {
     height: 60vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: white;
     margin-top: 50px;
-    border: 1px solid red;
-        ul {
-        background-color: white;
+    ul {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
         li {
-            width: calc(100%/3 - 10px);
+            width: calc(100%/3 - 20px);
         }
     }
 }
@@ -152,9 +181,46 @@ footer {
     }
 }
 
+/* Blog Page Styles */
 
-    
+.blogContainer {
+    margin-top: 50px;
+    display: flex;
+    .asideFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        padding: 20px;
+    }
+    article {
+        margin-left: 20px;
+        padding: 20px;
+        width: calc(66% - 20px);
+        border-bottom: 4px solid $primary;
+    }
+}
 
+.reviewContainer {
+    width: 66%;
+    margin-top: 25px;
+
+
+    .jeremy {
+        display: flex;
+        .imgContainer {
+            width: 30%;
+            padding: 10px;
+        }
+    }
+    .julia {
+        display: flex;
+        .imgContainer {
+            width: 30%;
+            padding: 10px;
+        }
+    }
+}
 
 
 

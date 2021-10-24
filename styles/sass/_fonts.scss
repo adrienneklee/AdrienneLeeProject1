@@ -6,6 +6,13 @@
     letter-spacing: 1px;
 }
 
+h1 {
+    @include fontSize(5rem);
+    line-height: 4.6rem;
+    font-family: "Lora", serif;
+    text-transform: uppercase;
+}
+
 h2 {
         @include fontSize(2.1rem);
         text-transform: uppercase;
@@ -22,3 +29,15 @@ p {
     font-weight: normal;
     line-height: 1.6;
 }
+
+time {
+    @include fontSize(1rem);
+    font-weight: normal;
+    font-style: italic;
+}
+
+span {
+    @include fontSize(1rem);
+    color: $fontAccent;
+}
+
