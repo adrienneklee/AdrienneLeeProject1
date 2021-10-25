@@ -22,3 +22,12 @@ nav {
     @include fontSize(2rem);
     font-family: "Lora", serif;
 }
+
+header .nav {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.5rem;
+    color: white;
+    visibility: hidden;
+}

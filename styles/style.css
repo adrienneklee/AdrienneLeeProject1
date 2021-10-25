@@ -340,6 +340,7 @@ button {
   width: 200px;
   padding: 5px;
   margin-top: 10px;
+  border-style: none;
 }
 
 h1 {
@@ -516,6 +517,15 @@ nav ul li .highlight {
   font-family: "Lora", serif;
 }
 
+header .nav {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 1.5rem;
+  color: white;
+  visibility: hidden;
+}
+
 header.headerBlog .background {
   background-image: url("../assets/blog-image-1.jpg");
   height: 40vh;
@@ -542,6 +552,9 @@ header.headerBlog .background h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .blogContainer .asideFlex {
   display: -webkit-box;
@@ -551,27 +564,37 @@ header.headerBlog .background h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: calc(100%/3);
+  height: 100vh;
 }
-.blogContainer article {
+.blogContainer .asideFlex aside {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: white;
+}
+.blogContainer .articleFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc((100%/3 * 2) - 20px);
+}
+.blogContainer .articleFlex article {
   margin-left: 20px;
   padding: 20px;
-  width: calc(66% - 20px);
   background-color: white;
   border-bottom: 4px solid #f6a823;
 }
 
-.asideFlex {
-  width: 33%;
-  padding: 20px;
+.aboutSophie {
+  height: 100vh;
 }
-.asideFlex aside {
-  width: 100%;
-  margin-top: 10px;
-  padding: 20px;
-  background-color: white;
+.aboutSophie aside img {
+  display: block;
 }
 
 h4 {
@@ -591,11 +614,12 @@ aside li {
 }
 
 .reviewContainer {
-  width: 66%;
+  width: calc((100%/3 * 2) - 20px);
   margin-top: 25px;
-  margin-left: 33%;
+  margin-left: calc(100%/3 + 20px);
   background-color: white;
   border-bottom: 5px solid #f6a823;
+  margin-bottom: 25px;
 }
 .reviewContainer .jeremy {
   display: -webkit-box;
@@ -617,9 +641,9 @@ aside li {
 }
 
 .formContainer {
-  width: 66%;
+  width: calc((100%/3 * 2) - 20px);
   margin-top: 25px;
-  margin-left: 33%;
+  margin-left: calc(100%/3 + 20px);
 }
 
 header.headerContact .background {
@@ -687,6 +711,9 @@ aside address {
   width: calc(100%/3 * 2);
   margin: 0 auto;
   padding: 0;
+}
+.formContainer button {
+  width: 100%;
 }
 
 form {
