@@ -57,6 +57,12 @@ h4 {
     margin-top: 10px;
 }
 
+article {
+    p {
+        padding: 5px 0;
+    }
+}
+
 aside li {
     list-style-type: circle;
     list-style-position: inside;
@@ -70,11 +76,10 @@ aside li {
     width: calc((100%/3 * 2) - 20px);
     margin-top: 25px;
     margin-left: calc(100%/3 + 20px);
-    background-color: white;
-    border-bottom: 5px solid $primary;
     margin-bottom: 25px;
     .jeremy {
         display: flex;
+        background-color: white;
         .imgContainer {
             width: 30%;
             padding: 10px;
@@ -82,6 +87,9 @@ aside li {
     }
     .julia {
         display: flex;
+        margin-top: 20px;
+        background-color: white;
+        border-bottom: 5px solid $primary;
         .imgContainer {
             width: 30%;
             padding: 10px;
@@ -89,8 +97,8 @@ aside li {
     }
 }
 
-.formContainer {
-    width: calc((100%/3 * 2) - 20px);
-    margin-top: 25px;
-    margin-left: calc(100%/3 + 20px);
+form {
+    button {
+        width: 100%;
+    }
 }

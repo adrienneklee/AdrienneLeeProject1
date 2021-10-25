@@ -4,20 +4,23 @@ form {
     padding: 20px 0px;
 }
 
- 	input {
-		width: calc(50% - 10px);
-        margin-right: 5px;
-        padding: 10px;
-        font-style: italic;
-	}
+input {
+    width: calc(50% - 10px);
+    margin-right: 5px;
+    padding: 10px;
+    font-style: italic;
+    border-style: none;
+}
 
-    textarea {
-        width: calc(100% - 10px);
-        margin-top: 10px;
-        padding: 10px;
-        font-style: italic;
-    }
+textarea {
+    width: calc(100% - 10px);
+    margin: 10px 0;
+    padding: 10px;
+    font-style: italic;
+    border-style: none;
+}
 
-	button [type="submit"] {
-		width: 100%;
-	}
+button [type="submit"] {
+    width: 100%;
+    border-style: none;
+}
