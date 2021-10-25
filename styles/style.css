@@ -817,7 +817,7 @@ button [type=submit] {
           align-items: center;
   height: 50%;
 }
-.aboutSection .aboutFlexContainer .imgContainer {
+.aboutSection .aboutFlexContainer .doodle {
   width: 50%;
   height: 40vh;
   background-color: #a82706;
@@ -825,11 +825,26 @@ button [type=submit] {
   top: 0;
   left: 0;
 }
-.aboutSection .aboutFlexContainer .imgContainer img {
+.aboutSection .aboutFlexContainer .doodle img {
   width: 80%;
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 15px;
+}
+
+.aboutSection .aboutFlexContainer .umbrellas {
+  width: 50%;
+  height: 40vh;
+  background-color: #f6a823;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.aboutSection .aboutFlexContainer .umbrellas img {
+  width: 80%;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
 }
 
 .textContainer {
@@ -897,10 +912,10 @@ button [type=submit] {
           align-items: center;
   margin-top: 50px;
 }
-.journeySection aside {
+.journeySection .imgContainer {
   width: 33%;
 }
-.journeySection aside img {
+.journeySection .imgContainer img {
   -webkit-box-shadow: 15px 15px 1px #f6a823;
           box-shadow: 15px 15px 1px #f6a823;
 }

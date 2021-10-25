@@ -63,7 +63,7 @@
         justify-content: flex-start;
         align-items: center;
         height: 50%;
-        .imgContainer {
+        .doodle {
             width: 50%;
             height: 40vh;
             background-color: $accentRust;
@@ -73,12 +73,33 @@
             img {
                 width: 80%;
                 position: absolute;
-                top: -20px;
+                top: -25px;
                 right: 15px;
                 }
             }
         }
+}
+
+.aboutSection {
+    .aboutFlexContainer {
+    .umbrellas {
+        width: 50%;
+        height: 40vh;
+        background-color: $primary;
+        position: relative;
+        top: 0;
+        left: 0;
+    img {
+        width: 80%;
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        
+            }
+        }
     }
+}
+
 
 // .travelled {
 //     display: flex;
@@ -146,7 +167,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    aside {
+    .imgContainer {
         width: 33%;
         img {
             box-shadow: 15px 15px 1px $primary;
