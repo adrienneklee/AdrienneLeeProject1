@@ -47,84 +47,68 @@
 }
 
 .bioSection {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-        p {
-            width: 80%;
-        }
+    p {
+        width: 90%;
+    }
 }
 
+/*About Section Styling*/ 
 .aboutSection {
     height: 100vh;
+    color: white;
     .aboutFlexContainer {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 50%;
-        .doodle {
-            width: 50%;
-            height: 40vh;
-            background-color: $accentRust;
-            position: relative;
-            top: 0;
-            left: 0;
-            img {
-                width: 80%;
-                position: absolute;
-                top: -25px;
-                right: 15px;
-                }
-            }
         }
-}
+    }
 
-.aboutSection {
-    .aboutFlexContainer {
-    .umbrellas {
-        width: 50%;
-        height: 40vh;
-        background-color: $primary;
-        position: relative;
-        top: 0;
-        left: 0;
+.doodle {
+    width: 50%;
+    height: 45vh;
+    background-color: $accentRust;
+    position: relative;
+    top: 0;
+    left: 0;
     img {
         width: 80%;
         position: absolute;
-        bottom: 10px;
-        left: 15px;
-        
-            }
+        top: -5%;
+        right: 2%;
+        }
+    }
+
+.umbrellas {
+    width: 50%;
+    height: 45vh;
+    background-color: $primary;
+    position: relative;
+    top: 0;
+    left: 0;
+    img {
+        width: 80%;
+        position: absolute;
+        bottom: 5%;
+        left: 2%;
+    }
+}
+
+.aboutSection{
+.textContainer {
+    width: 50%;
+    padding: 75px;
+    h3 + p {
+        margin: 10px 0;
         }
     }
 }
 
-
-// .travelled {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     p {
-//         text-align: left;
-//     }
-//     .imgContainer {
-//         height: 40vh;
-//         background-color: $primary;
-//         img {
-//             left: -20px;
-//         }
-//     }
-// }
-
-.textContainer {
-    width: 50%;
-    padding: 50px;
-    h3 {
-        margin: 10px 0;
-    }
-}
-
+/* Service Section Styling */ 
 .iconBox {
     height: 50px;
     width: 50px;
@@ -141,7 +125,7 @@
 }
 
 .servicesSection {
-    margin-top: 50px;
+    margin-top: 75px;
     .flexContainer {
         display: flex;
         .container {
@@ -153,7 +137,7 @@
 
 .imgBreak {
     background-image: url(..//../assets/home-image-4.jpg);
-    height: 50vh;
+    height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -162,7 +146,7 @@
 }
 
 .journeySection {
-    height: 50vh;
+    height: 65vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,17 +163,18 @@
 }
 
 .gallery {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: white;
-    margin-top: 50px;
     ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        margin-top: 75px;
         li {
             width: calc(100%/3 - 20px);
         }
@@ -204,12 +189,91 @@ footer {
     }
 }
 
+// /* Media Queries */ 
+@media (max-width: 420px) {
+    ul li {
+    display: none;  
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .headerContent {
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleContainer img {
+        height: 75px;
+        width: 120px;
+        left: -20px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        @include fontSize(0.8rem);
+        font-weight: normal;
+        line-height: 1rem;
+    }
+    button {
+        width: 100%;
+    }
+    .aboutFlexContainer {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .aboutSection .textContainer{
+        width: 90%;
+        padding: 20px;
+        margin: 50px 0;
+    }
+    .imgContainer {
+        width: 100%;
+    }
+    .textContainer.doodle,
+    .textContainer.travelled {
+        display: grid;
+        grid-template-rows: 1fr 2fr 0.5fr;
+    }
+    h3 {
+        font-size: 1.4rem;
+        width: 100%;
+    }
+    .doodle img,
+    .umbrellas img {
+        position: static;
+    }
+    .iconBox {
+        display: none;
+    }
+    .imgBreak {
+        display: none;
+    }
+    .journeySection {
+        height: 100vh;
+        margin-top: 50px;
+        flex-direction: column;
+        justify-content: center;
+        article {
+            width: 100%;
+        }
+        .imgContainer {
+            width: 100%;
+        }
+        .gallery {
+            flex-direction: column;
+            ul {
+                flex-direction: column;
+                li {
+                    width: 100%;
+                }
+            }
+        }
 
-
-
-
-
-
-
+    }
+}
 
 

@@ -63,12 +63,16 @@ article {
     }
 }
 
+aside li::before {
+    content: '\25CF';
+    color: $primary;
+}
+
 aside li {
-    list-style-type: circle;
-    list-style-position: inside;
     @include fontSize(1rem);
     font-weight: normal;
     margin-top: 10px;
+    padding: 5px 0;
 }
 
 
