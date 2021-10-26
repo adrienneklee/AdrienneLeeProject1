@@ -18,6 +18,20 @@
     background-color: $primary;
     height: 85vh;
 }
+.headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+    i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: hidden;
+
+    }
+}
 
 .headerContent {
     margin-top: 50px;
@@ -41,13 +55,15 @@
         height: 100px;
         width: 165px;
         position: absolute;
-        top: 0;
+        top: 30px;
         left: -40px;
     }
 }
 
+/* Styles for Bio Section */
+
 .bioSection {
-    height: 60vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,15 +72,15 @@
     }
 }
 
-/*About Section Styling*/ 
+/* About Section Styling */ 
 .aboutSection {
-    height: 100vh;
-    color: white;
+    background-color: white;
     .aboutFlexContainer {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 50%;
+        margin-top: 50px;
         }
     }
 
@@ -101,7 +117,7 @@
 .aboutSection{
 .textContainer {
     width: 50%;
-    padding: 75px;
+    padding: 25px;
     h3 + p {
         margin: 10px 0;
         }
@@ -125,7 +141,7 @@
 }
 
 .servicesSection {
-    margin-top: 75px;
+    margin-top: 100px;
     .flexContainer {
         display: flex;
         .container {
@@ -146,7 +162,6 @@
 }
 
 .journeySection {
-    height: 65vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,23 +173,27 @@
         }
     }
     article {
-        width: 66%;
+        width: calc(66% - 20px);
+        margin: 50px 0px 50px 20px;
+
     }
 }
 
+/* Gallery Styling */ 
 .gallery {
-    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: white;
+    
     ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         margin-top: 75px;
+        margin-bottom: 75px;
         li {
             width: calc(100%/3 - 20px);
         }
@@ -189,91 +208,156 @@ footer {
     }
 }
 
-// /* Media Queries */ 
-@media (max-width: 420px) {
-    ul li {
-    display: none;  
-    }
+/* Media Queries (Desktop First) */ 
+@media (max-width: 980px) {
     h1 {
-        font-size: 3rem;
+        font-size: 5rem;
+        line-height: 5.5rem;
     }
-    .headerContent {
-        margin: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .textContainer{
+        margin-left: 50px;
     }
-    .titleContainer img {
-        height: 75px;
+    .headerContent .imgContainer {
+        height: 350px;
+        width: 300px;
+    }
+    .headerContent .titleContainer img {
+        height: 80px;
         width: 120px;
-        left: -20px;
+        left: -25px;
     }
-    h2 {
-        font-size: 1.4rem;
+    .doodle, 
+    .umbrellas {
+        height: 40vh;
     }
-    p {
-        @include fontSize(0.8rem);
-        font-weight: normal;
-        line-height: 1rem;
+    .journeySection article {
+        width: calc(66% - 50px);
+        margin: 25px 0px 25px 50px;
     }
-    button {
-        width: 100%;
-    }
-    .aboutFlexContainer {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .aboutSection .textContainer{
-        width: 90%;
-        padding: 20px;
-        margin: 50px 0;
-    }
-    .imgContainer {
-        width: 100%;
-    }
-    .textContainer.doodle,
-    .textContainer.travelled {
-        display: grid;
-        grid-template-rows: 1fr 2fr 0.5fr;
-    }
-    h3 {
-        font-size: 1.4rem;
-        width: 100%;
-    }
-    .doodle img,
-    .umbrellas img {
-        position: static;
-    }
-    .iconBox {
-        display: none;
-    }
-    .imgBreak {
-        display: none;
-    }
-    .journeySection {
-        height: 100vh;
-        margin-top: 50px;
-        flex-direction: column;
-        justify-content: center;
-        article {
-            width: 100%;
-        }
-        .imgContainer {
-            width: 100%;
-        }
-        .gallery {
-            flex-direction: column;
-            ul {
-                flex-direction: column;
-                li {
-                    width: 100%;
-                }
-            }
-        }
-
+    .contactContainer aside {
+        width: calc(100%/3 - 25px);
+        padding: 40px 10px;
+        margin-right: 25px;
     }
 }
 
+@media (max-width: 745px) {
+    .headerMain {
+        height: 70vh;
+    }
+    .headerContent .titleContainer img {
+        display: none;
+    }
+    .headerContent .imgContainer {
+    height: 300px;
+    width: 250px;
+    img {
+    box-shadow: 5px 5px 1px white;
+        }
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    p, span {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    button {
+        font-size: 0.8rem;
+    }
+    time {
+    font-family: 0.8rem;
+    }
+    .doodle img, .umbrellas img {
+        width: 100%;
+    }
+    .umbrellas img {
+        left: -5%;
+    }
+    .aboutFlexContainer:nth-child(2){
+        margin-top: 15px;
+    }
+    .textContainer:nth-child(2) {
+        padding: 0px 10px;
+    }
+    .journeySection > article:nth-child(2) {
+        margin-left: 20px;
+    }
 
+    /* Blog Section */
+    aside li {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+        margin: 5px 0;
+    } 
+    .blogContainer .articleFlex {
+    width: 100%;
+    }
+    .blogContainer .asideFlex aside {
+        margin-bottom: 0;
+    }
+    .aboutSophie {
+        height: 70vh;
+        padding: 10px;
+    }
+    .recentPosts {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+
+    .reviewContainer {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    /* Contact Section */
+    .contactContainer {
+        height: auto;
+        flex-direction: column;
+    }
+    .contactContainer aside {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .formContainer {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
+    }
+    .headerContent .imgContainer {
+    height: 200px;
+    width: 200px;
+    }
+    .hideMobile {
+        visibility: hidden;
+    }
+    .headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+    i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: visible;
+
+    }
+}
+}

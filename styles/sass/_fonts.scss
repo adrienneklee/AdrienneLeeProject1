@@ -5,10 +5,10 @@
     font-weight: bold;
     letter-spacing: 1px;
 }
-
+//  Bumped up h1 font to be more in line with style guide
 h1 {
-    @include fontSize(5rem);
-    line-height: 4.6rem;
+    @include fontSize(6rem);
+    line-height: 6.6rem;
     font-family: "Lora", serif;
     text-transform: uppercase;
 }

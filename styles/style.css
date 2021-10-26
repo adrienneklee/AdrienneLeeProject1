@@ -228,12 +228,12 @@ html {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 4.6rem;
+  line-height: 6.6rem;
   font-family: "Lora", serif;
   text-transform: uppercase;
 }
@@ -344,12 +344,12 @@ button {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 4.6rem;
+  line-height: 6.6rem;
   font-family: "Lora", serif;
   text-transform: uppercase;
 }
@@ -412,12 +412,12 @@ span {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #2c2c2c;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 4.6rem;
+  line-height: 6.6rem;
   font-family: "Lora", serif;
   text-transform: uppercase;
 }
@@ -565,12 +565,10 @@ header.headerBlog .background h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: calc(100%/3);
-  height: 100vh;
 }
 .blogContainer .asideFlex aside {
   width: 100%;
   margin-bottom: 25px;
-  padding: 20px;
   background-color: white;
 }
 .blogContainer .articleFlex {
@@ -591,7 +589,7 @@ header.headerBlog .background h1 {
 }
 
 .aboutSophie {
-  height: 100vh;
+  height: 90vh;
 }
 .aboutSophie aside img {
   display: block;
@@ -610,6 +608,10 @@ aside li::before {
   color: #f6a823;
 }
 
+.recentPosts {
+  height: inherit;
+}
+
 aside li {
   font-size: 1rem;
   color: #2c2c2c;
@@ -617,8 +619,7 @@ aside li {
   font-weight: bold;
   letter-spacing: 1px;
   font-weight: normal;
-  margin-top: 10px;
-  padding: 5px 0;
+  margin: 20px 0;
 }
 
 .reviewContainer {
@@ -764,6 +765,20 @@ button [type=submit] {
   height: 85vh;
 }
 
+.headerNav {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.headerNav i {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 1.6rem;
+  color: black;
+  visibility: hidden;
+}
+
 .headerContent {
   margin-top: 50px;
   display: -webkit-box;
@@ -793,12 +808,13 @@ button [type=submit] {
   height: 100px;
   width: 165px;
   position: absolute;
-  top: 0;
+  top: 30px;
   left: -40px;
 }
 
+/* Styles for Bio Section */
 .bioSection {
-  height: 60vh;
+  height: 55vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,10 +830,9 @@ button [type=submit] {
   width: 90%;
 }
 
-/*About Section Styling*/
+/* About Section Styling */
 .aboutSection {
-  height: 100vh;
-  color: white;
+  background-color: white;
 }
 .aboutSection .aboutFlexContainer {
   display: -webkit-box;
@@ -830,6 +845,7 @@ button [type=submit] {
       -ms-flex-align: center;
           align-items: center;
   height: 50%;
+  margin-top: 50px;
 }
 
 .doodle {
@@ -864,7 +880,7 @@ button [type=submit] {
 
 .aboutSection .textContainer {
   width: 50%;
-  padding: 75px;
+  padding: 25px;
 }
 .aboutSection .textContainer h3 + p {
   margin: 10px 0;
@@ -893,7 +909,7 @@ button [type=submit] {
 }
 
 .servicesSection {
-  margin-top: 75px;
+  margin-top: 100px;
 }
 .servicesSection .flexContainer {
   display: -webkit-box;
@@ -916,7 +932,6 @@ button [type=submit] {
 }
 
 .journeySection {
-  height: 65vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,11 +951,12 @@ button [type=submit] {
           box-shadow: 15px 15px 1px #f6a823;
 }
 .journeySection article {
-  width: 66%;
+  width: calc(66% - 20px);
+  margin: 50px 0px 50px 20px;
 }
 
+/* Gallery Styling */
 .gallery {
-  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -967,6 +983,7 @@ button [type=submit] {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 75px;
+  margin-bottom: 75px;
 }
 .gallery ul li {
   width: calc(100%/3 - 20px);
@@ -980,130 +997,186 @@ footer p {
   color: white;
 }
 
-@media (max-width: 420px) {
-  ul li {
+/* Media Queries (Desktop First) */
+@media (max-width: 980px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  .textContainer {
+    margin-left: 50px;
+  }
+
+  .headerContent .imgContainer {
+    height: 350px;
+    width: 300px;
+  }
+
+  .headerContent .titleContainer img {
+    height: 80px;
+    width: 120px;
+    left: -25px;
+  }
+
+  .doodle,
+.umbrellas {
+    height: 40vh;
+  }
+
+  .journeySection article {
+    width: calc(66% - 50px);
+    margin: 25px 0px 25px 50px;
+  }
+
+  .contactContainer aside {
+    width: calc(100%/3 - 25px);
+    padding: 40px 10px;
+    margin-right: 25px;
+  }
+}
+@media (max-width: 745px) {
+  .headerMain {
+    height: 70vh;
+  }
+
+  .headerContent .titleContainer img {
     display: none;
   }
 
-  h1 {
-    font-size: 3rem;
+  .headerContent .imgContainer {
+    height: 300px;
+    width: 250px;
   }
-
-  .headerContent {
-    margin: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .titleContainer img {
-    height: 75px;
-    width: 120px;
-    left: -20px;
+  .headerContent .imgContainer img {
+    -webkit-box-shadow: 5px 5px 1px white;
+            box-shadow: 5px 5px 1px white;
   }
 
   h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.8rem;
-    color: #2c2c2c;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-weight: normal;
-    line-height: 1rem;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .aboutFlexContainer {
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-
-  .aboutSection .textContainer {
-    width: 90%;
-    padding: 20px;
-    margin: 50px 0;
-  }
-
-  .imgContainer {
-    width: 100%;
-  }
-
-  .textContainer.doodle,
-.textContainer.travelled {
-    display: grid;
-    grid-template-rows: 1fr 2fr 0.5fr;
+    font-size: 1.8rem;
   }
 
   h3 {
     font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p, span {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+
+  time {
+    font-family: 0.8rem;
+  }
+
+  .doodle img, .umbrellas img {
     width: 100%;
   }
 
-  .doodle img,
-.umbrellas img {
-    position: static;
+  .umbrellas img {
+    left: -5%;
   }
 
-  .iconBox {
-    display: none;
+  .aboutFlexContainer:nth-child(2) {
+    margin-top: 15px;
   }
 
-  .imgBreak {
-    display: none;
+  .textContainer:nth-child(2) {
+    padding: 0px 10px;
   }
 
-  .journeySection {
-    height: 100vh;
-    margin-top: 50px;
+  .journeySection > article:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  /* Blog Section */
+  aside li {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    margin: 5px 0;
+  }
+
+  .blogContainer .articleFlex {
+    width: 100%;
+  }
+
+  .blogContainer .asideFlex aside {
+    margin-bottom: 0;
+  }
+
+  .aboutSophie {
+    height: 70vh;
+    padding: 10px;
+  }
+
+  .recentPosts {
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+
+  .reviewContainer {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  /* Contact Section */
+  .contactContainer {
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
-  .journeySection article {
+
+  .contactContainer aside {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .formContainer {
     width: 100%;
   }
-  .journeySection .imgContainer {
+
+  textarea {
     width: 100%;
   }
-  .journeySection .gallery {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
   }
-  .journeySection .gallery ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+
+  .headerContent .imgContainer {
+    height: 200px;
+    width: 200px;
   }
-  .journeySection .gallery ul li {
-    width: 100%;
+
+  .hideMobile {
+    visibility: hidden;
+  }
+
+  .headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .headerNav i {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.6rem;
+    color: black;
+    visibility: visible;
   }
 }
