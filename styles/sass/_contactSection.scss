@@ -11,28 +11,48 @@ header.headerContact {
             @include fontSize (3rem);
             font-family: "Lora", serif;
             position: absolute;
-            bottom: -90px;
+            bottom: -100px;
             left: 140px;
         }
     }
 }
 
+.headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+    i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: hidden;
+
+    }
+}
+
 .contactContainer {
-    height: 50vh;
-    margin: 50px 0 25px;
+    height: inherit;
+    margin: 75px 0 75px;
     display: flex;
 }
 
 aside {
     width: calc(100%/3 - 50px);
     height: 35vh;
-    padding: 40px 20px;
+    padding: 40px 30px;
     margin-right: 50px;
     background-color: white;
     i {
         color: $primary;
         font-size: 1.2rem;
-        padding: 10px 15px 10px 0;
+        padding: 10px;
+    }
+    .email {
+        font-weight: bold;
+        font-size: 1rem;
+        padding-bottom: 20px;
     }
     a {
         @include fontSize(0.8rem);

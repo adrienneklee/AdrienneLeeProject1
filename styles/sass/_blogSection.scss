@@ -10,35 +10,55 @@ header.headerBlog {
         h1 {
             @include fontSize(3rem);
             font-family: "Lora", serif;
+            margin: 0;
             position: absolute;
-            bottom: -90px;
+            bottom: -70px;
             left: 140px;
         }
+    }
+}
+
+.headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+    i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: hidden;
+
     }
 }
 
 .blogContainer {
     margin-top: 50px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     .asideFlex {
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
         width: calc(100%/3);
-        // height: 100vh;
-        aside{
+        aside {
         width: 100%;
         margin-bottom: 25px;
-        // padding: 20px;
         background-color: white;
+        height: inherit;
+        span {
+            font-size: 0.8rem;
+        }
         }
     }
     .articleFlex {
         display: flex;
         flex-direction: column;
-        width: calc((100%/3 * 2) - 20px);
+        width: calc(100%/3 * 2);
+        margin-left: 25px;
         article {
-        margin-left: 20px;
         padding: 20px;
         background-color: white;
         border-bottom: 4px solid $primary;
@@ -46,38 +66,60 @@ header.headerBlog {
     }  
 }
 
-.aboutSophie {
-    height: 90vh;
-    aside img {
-    display: block;
+/* Scaled down blog font size to be more in line with provided design and to keep HTML semantic */
+
+.blogContainer {
+    .articleFlex {
+        h2 {
+            font-size: 1.8rem;
+        }
     }
 }
 
-h4 {
-    margin-top: 10px;
-}
-
-article {
-    p {
-        padding: 5px 0;
+.asideFlex {
+    .aboutSophie {
+        height: 90vh;
+        aside img {
+        display: block;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
     }
 }
 
 aside li::before {
     content: '\25CF';
     color: $primary;
+    margin-right: 8px;
 }
 
 .recentPosts {
     height: inherit;
+    h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
 }
 
-aside li {
-    @include fontSize(1rem);
-    font-weight: normal;
-    margin: 20px 0;
+.recentPosts {
+    ul {
+        li {
+            @include fontSize(0.8rem);
+            font-weight: normal;
+            padding-top: 10px;
+            margin-left: 10px;
+        }
+    }
 }
 
+
+article {
+    p {
+        padding: 10px 0;
+    }
+}
 
 .reviewContainer {
     width: calc((100%/3 * 2) - 20px);
@@ -88,8 +130,8 @@ aside li {
         display: flex;
         background-color: white;
         .imgContainer {
-            width: 30%;
-            padding: 10px;
+            width: 40%;
+            padding: 20px;
         }
     }
     .julia {
@@ -98,9 +140,24 @@ aside li {
         background-color: white;
         border-bottom: 5px solid $primary;
         .imgContainer {
-            width: 30%;
-            padding: 10px;
+            width: 40%;
+            padding: 20px;
         }
+    }
+}
+
+.reviewContainer {
+    .reviewText{
+    padding: 20px;
+    span {
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+    p {
+        font-style: normal;
+        margin: 0;
+        padding: 5px 20px;
+    }
     }
 }
 

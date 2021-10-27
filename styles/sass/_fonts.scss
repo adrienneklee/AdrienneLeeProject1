@@ -8,7 +8,7 @@
 //  Bumped up h1 font to be more in line with style guide
 h1 {
     @include fontSize(6rem);
-    line-height: 6.6rem;
+    line-height: 6.8rem;
     font-family: "Lora", serif;
     text-transform: uppercase;
 }
@@ -29,10 +29,12 @@ h4 {
     text-transform: uppercase;
 
 }
+/* Scaled down paragraph font size to be more in line with provided design*/ 
 p {
-    @include fontSize(1rem);
+    @include fontSize(0.8rem);
     font-weight: normal;
-    line-height: 1.6;
+    line-height: 1.28;
+    margin-top: 15px;
 }
 
 time {

@@ -21,6 +21,7 @@ nav {
 .logo {
     @include fontSize(2rem);
     font-family: "Lora", serif;
+    margin: 0;
 }
 
 header .nav {
