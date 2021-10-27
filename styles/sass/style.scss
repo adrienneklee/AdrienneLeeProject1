@@ -245,9 +245,24 @@ footer {
     .headerMain {
         height: 70vh;
     }
-    .headerContent .titleContainer img {
-        display: none;
+    .hideMobile {
+    visibility: hidden;
     }
+    .headerNav {
+    position: relative;
+    top: 0;
+    right: 0;
+    i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: visible;
+
+    }
+}
+
     .headerContent .imgContainer {
     height: 300px;
     width: 250px;
@@ -334,30 +349,86 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     h1 {
     font-size: 3.8rem;
     line-height: 4rem;
     }
-    .headerContent .imgContainer {
-    height: 200px;
-    width: 200px;
+    .headerContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .titleContainer img {
+        top: 10px;
+        left: -35px;
+    }
+    .titleContainer > h1:nth-child(1) {
+        margin-bottom: 25px;
+    }
+    .bioSection p {
+        width: 100%;
+    }
+    .wrapper:nth-child(1) > h2:nth-child(1) {
+    margin-top: 50px;
+    }
+    .aboutFlexContainer:nth-child(1) {
+        margin-top: 0px;
+    }
+    .textContainer:nth-child(1) {
+        margin-left: 25px;
+        padding-right: 20px;
+    }
+    .textContainer:nth-child(2){
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    /* Services Section - set to stack */
+    .servicesSection .flexContainer {
+        flex-direction: column-reverse;
+        .container {
+            width: 100%;
+        }
+    } 
+    .iconBox {
+        align-self: center;
+    }
+    .imgBreak {
+        height: 40vh;
+    }
+    .journeySection {
+        flex-direction: column;
+        article {
+            width: 100%;
+            margin: 0;
+        }
+        article:nth-child(2) {
+            margin: 25px 0;
+            text-align: center;
+        }
     }
     .hideMobile {
-        visibility: hidden;
+        display: none;
     }
-    .headerNav {
-    position: relative;
-    top: 0;
-    right: 0;
-    i {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        font-size: 1.6rem;
-        color: black;
-        visibility: visible;
+    .gallery ul {
+        justify-content: space-evenly;
+    }
+/* Contact Page */
+    .headerContent {
+        .background {
+            h1 {
+                width: 100%;
+            }
+            h1:nth-child(1) {
+                left: 88px;
+                top: 250px;
+            }
+        }
+    }
 
-    }
-}
+
+
+
 }
