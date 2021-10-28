@@ -303,6 +303,7 @@ span {
   padding: 0;
   margin: 0;
   max-width: 100%;
+  border: 1px solid red;
 }
 
 html {
@@ -347,6 +348,17 @@ button {
   text-transform: uppercase;
   border-style: none;
   overflow: hidden;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+}
+
+.skipLink:focus {
+  left: 0;
 }
 
 h1 {
@@ -851,7 +863,7 @@ button [type=submit] {
 .headerNav i {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 0px;
   font-size: 1.6rem;
   color: black;
   visibility: hidden;
@@ -1244,7 +1256,7 @@ footer p {
   .headerContact .headerNav i {
     position: absolute;
     top: 25px;
-    right: 25px;
+    right: 0px;
     font-size: 1.6rem;
     color: black;
     visibility: visible;
@@ -1312,6 +1324,10 @@ footer p {
     width: 80%;
     margin-top: 50px;
     text-align: center;
+  }
+
+  .aboutFlexContainer .textContainer.travelled {
+    margin-right: 0;
   }
 
   .imgContainer.doodle {
@@ -1387,12 +1403,21 @@ footer p {
     text-align: center;
   }
 
-  .aboutFlexContainer {
-    margin-top: 100px;
+  .aboutSection .aboutFlexContainer {
+    margin-top: 0;
+  }
+
+  .aboutFlexContainer .textContainer.favThings,
+.aboutFlexContainer .textContainer.travelled {
+    margin-top: 75px;
   }
 
   .doodle, .umbrellas {
     height: 20vh;
+  }
+
+  .journeySection article {
+    padding: 0;
   }
 
   .gallery ul {
@@ -1419,13 +1444,13 @@ footer p {
     display: none;
   }
 
-  input {
+  .reviewContainer .formContainer input {
     width: 100%;
     margin-right: 0;
     margin-top: 10px;
+    display: block;
   }
-
-  textarea {
+  .reviewContainer .formContainer textarea {
     width: 100%;
   }
 }

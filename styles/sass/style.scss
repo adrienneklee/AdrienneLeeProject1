@@ -26,7 +26,7 @@
     i {
         position: absolute;
         top: 25px;
-        right: 25px;
+        right: 0px;
         font-size: 1.6rem;
         color: black;
         visibility: hidden;
@@ -406,7 +406,7 @@ footer {
         i {
         position: absolute;
         top: 25px;
-        right: 25px;
+        right: 0px;
         font-size: 1.6rem;
         color: black;
         visibility: visible;
@@ -469,7 +469,11 @@ footer {
             text-align: center;
         }
     }
-
+    .aboutFlexContainer{
+    .textContainer.travelled {
+        margin-right: 0;
+    }
+}
     .imgContainer.doodle {
         width: 80%;
         margin: 0;
@@ -532,12 +536,24 @@ footer {
         margin: 50px 0;
         text-align: center;
     }
-    .aboutFlexContainer{
-        margin-top: 100px;
+    .aboutSection {
+        .aboutFlexContainer {
+            margin-top: 0;
+        }
     }
-
+    .aboutFlexContainer {
+        .textContainer.favThings,
+        .textContainer.travelled {
+            margin-top: 75px;
+        }
+    }
     .doodle, .umbrellas {
         height: 20vh;
+    }
+    .journeySection {
+        article{
+            padding: 0;
+        }
     }
     .gallery {
         ul {
@@ -545,6 +561,7 @@ footer {
         flex-direction: column;    
         }
     }
+    // Blog Section
     .aboutSophie {
         margin-right: 0;
         padding: 10px;
@@ -560,13 +577,20 @@ footer {
             }
         }
     }
+    .reviewContainer {
+    .formContainer {
     input {
             width: 100%;
             margin-right: 0;
             margin-top: 10px;
+            display: block;
         }
     textarea {
         width: 100%;
     }
+}
+
+    }
+
     
 }

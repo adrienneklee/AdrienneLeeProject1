@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     max-width: 100%;
-    // border: 1px solid grey;
+    border: 1px solid red;
 }
 
 html {
@@ -15,6 +15,7 @@ html {
 body {
     font-size: 16px;
     background-color: $accentWhite;
+    // overflow-x: hidden;
 }
 
 ul, li {
@@ -46,4 +47,14 @@ button {
     text-transform: uppercase;
     border-style: none;
     overflow: hidden;
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+}
+.skipLink:focus {
+    left: 0;
 }
