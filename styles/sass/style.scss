@@ -112,6 +112,8 @@
 //         left: 2%;
 //     }
 // }
+/* Chose to use Box-Shadows over Positioning for the following section to improve the responsive design user experience as the page scales down without elements breaking out of containers */
+
 .doodle {
     width: 40%;
     img {
@@ -158,10 +160,11 @@
 }
 
 .servicesSection {
-    margin-top: 100px;
+    margin: 100px 0;
     .flexContainer {
         display: flex;
         margin-bottom: 40px;
+     
         .container {
             width: calc(50% - 25px);
             margin-left: 25px;
@@ -200,7 +203,7 @@
     }
 }
 
-/* Gallery Styling */ 
+/* Gallery Section Styling */ 
 .gallery {
     display: flex;
     justify-content: center;
@@ -221,6 +224,7 @@
     }
 }
 
+/* Foot Section Styling */ 
 footer {
     background-color: $accentGrey;
     text-align: center;
@@ -231,23 +235,28 @@ footer {
     }
 }
 
-/* Media Queries (Desktop First) */ 
+/* MEDIA QUERIES */ 
 @media (max-width: 980px) {
     h1 {
         font-size: 5rem;
-        line-height: 5.5rem;
-    }
-    .textContainer{
-        margin-left: 50px;
+        line-height: 5.6rem;
     }
     .headerContent .imgContainer {
-        height: 350px;
-        width: 300px;
+        height: 400px;
+        width: 350px;
+        img {
+        box-shadow: 10px 10px 1px white;
+        }
     }
     .headerContent .titleContainer img {
         height: 80px;
         width: 120px;
         left: -25px;
+    }
+    .aboutSection {
+        .textContainer{
+        padding: 0;
+        }
     }
     .doodle, 
     .umbrellas {
@@ -257,14 +266,34 @@ footer {
         width: calc(66% - 50px);
         margin: 25px 0px 25px 50px;
     }
+
+    /*Blog Page*/
+    header.headerBlog {
+        .background {
+            h1 {
+                left: 92px;
+                bottom: -57px;
+            }
+        }
+    }
+    /*Contact Page*/ 
+    header.headerContact {
+        .background {
+            h1 {
+                left: 96px;
+                bottom: -100px;
+            }
+        }
+    }
     .contactContainer aside {
+        height: inherit;
         width: calc(100%/3 - 25px);
         padding: 40px 10px;
         margin-right: 25px;
     }
 }
 
-@media (max-width: 745px) {
+@media (max-width: 768px) {
     .headerMain {
         height: 70vh;
     }
@@ -282,10 +311,8 @@ footer {
         font-size: 1.6rem;
         color: black;
         visibility: visible;
-
+        }
     }
-}
-
     .headerContent .imgContainer {
     height: 300px;
     width: 250px;
@@ -309,88 +336,123 @@ footer {
     button {
         font-size: 0.8rem;
     }
-    time {
-    font-family: 0.8rem;
+    .bioSection {
+        p {
+            width: 100%;
+        }
     }
-    .doodle img, .umbrellas img {
-        width: 100%;
+    .aboutSection {
+        .textContainer.favThings {
+            margin: 0;
+            width: 50%;
+        }
+        .textContainer.travelled {
+            margin-right: 25px;
+            width: 50%;
+        }
     }
-    .umbrellas img {
-        left: -5%;
+    .journeySection {
+        article {
+            width: 70%;
+            margin-left: 25px;
+        }
     }
-    .aboutFlexContainer:nth-child(2){
-        margin-top: 15px;
+    .gallery {
+        height: 50vh;
+        ul {
+            justify-content: center;
+            flex-wrap: wrap;
+            li img {
+                display: inline-block;
+            }
+        }
     }
-    .textContainer:nth-child(2) {
-        padding: 0px 10px;
+    .special {
+        display: none;
     }
-    .journeySection > article:nth-child(2) {
-        margin-left: 20px;
-    }
-
-//     .servicesSection {
-//     margin-top: 100px;
-//     border: 1px solid blue;
-//     .flexContainer {
-//         display: flex;
-//         margin-bottom: 40px;
-//         border: 1px solid green;
-//         .container {
-//             width: calc(50% - 50px);
-//             margin: 0 20px;
-//             border: 1px solid red;
-//         }
-//     }
-// }
 
     /* Blog Section */
-    aside li {
-        font-size: 0.8rem;
-        line-height: 1.3rem;
-        margin: 5px 0;
-    } 
-    .blogContainer .articleFlex {
-    width: 100%;
+    .headerBlog {
+        .headerNav {
+        height: 10vh;
+        position: relative;
+        top: 0;
+        right: 0;
+            i {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 1.6rem;
+            color: black;
+            visibility: visible;
+            }
+        }
     }
-    .blogContainer .asideFlex aside {
-        margin-bottom: 0;
+    .blogContainer {
+        flex-direction: column-reverse;
+        .asideFlex {
+            width: 100%;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+            aside {
+                text-align: center;
+            }
+        }
     }
     .aboutSophie {
-        height: 70vh;
-        padding: 10px;
+        margin: 0;
     }
-    .recentPosts {
-        padding: 20px 10px;
-        margin-top: 20px;
+    .blogContainer {
+        .articleFlex {
+            width: 100%;
+            margin: 0;
+        }
     }
-
     .reviewContainer {
         width: 100%;
-        margin-left: 0;
-        margin-bottom: 0;
+        margin: 25px 0;
+        .reviewText {
+            padding: 5px;
+        }
     }
-
-    /* Contact Section */
-    .contactContainer {
-        height: auto;
-        flex-direction: column;
+/* Contact Section */
+.headerContact {
+    .headerNav {
+    height: 10vh;
+    position: relative;
+    top: 0;
+    right: 0;
+        i {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 1.6rem;
+        color: black;
+        visibility: visible;
+        }
     }
-    .contactContainer aside {
+}
+.contactContainer {
+    flex-direction: column;
+    aside {
         width: 100%;
         margin-bottom: 25px;
+        text-align: center;
     }
     .formContainer {
         width: 100%;
     }
-    textarea {
-        width: 100%;
-    }
 }
+}
+
 
 @media (max-width: 650px) {
     h1 {
     font-size: 3.8rem;
-    line-height: 4rem;
+    line-height: 4.3rem;
+    margin: 0;
     }
     .headerContent {
         flex-direction: column;
@@ -399,39 +461,49 @@ footer {
         margin-top: 0;
     }
     .titleContainer img {
-        top: 10px;
-        left: -35px;
+        display: none;
     }
-    .titleContainer > h1:nth-child(1) {
-        margin-bottom: 25px;
-    }
-    .bioSection p {
-        width: 100%;
-    }
-    .wrapper:nth-child(1) > h2:nth-child(1) {
-    margin-top: 50px;
-    }
-    .aboutFlexContainer:nth-child(1) {
-        margin-top: 0px;
-    }
-    .textContainer:nth-child(1) {
-        margin-left: 25px;
-        padding-right: 20px;
-    }
-    .textContainer:nth-child(2){
-        margin-left: 10px;
-        margin-top: 20px;
-    }
-
-    /* Services Section - set to stack */
-    .servicesSection .flexContainer {
-        flex-direction: column-reverse;
-        .container {
-            width: 100%;
+    .aboutSection {
+        .aboutFlexContainer {
+            flex-direction: column;
         }
-    } 
+    }
+    .imgContainer.doodle {
+        width: 80%;
+        margin: 0;
+        img {
+            box-shadow: -30px 30px 1px $accentRust;
+        }
+    }
+    .aboutFlexContainer{
+        .textContainer.favThings,
+        .textContainer.travelled {
+            width: 80%;
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+    .imgContainer.umbrellas {
+        width: 80%;
+        margin: 0;
+        img {
+            box-shadow: 30px 30px 1px $primary;
+            margin-top: 25px;
+        }
+    }
+    .servicesSection {
+        .flexContainer {
+            flex-direction: column-reverse;
+            margin: 0;
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
     .iconBox {
         align-self: center;
+        margin: 20px 0;
     }
     .imgBreak {
         height: 40vh;
@@ -442,31 +514,9 @@ footer {
             width: 100%;
             margin: 0;
         }
-        article:nth-child(2) {
-            margin: 25px 0;
-            text-align: center;
-        }
     }
-    .hideMobile {
-        display: none;
-    }
-    .gallery ul {
-        justify-content: space-evenly;
-    }
-/* Contact Page */
-    .headerContent {
-        .background {
-            h1 {
-                width: 100%;
-            }
-            h1:nth-child(1) {
-                left: 88px;
-                top: 250px;
-            }
-        }
-    }
+}
 
-
-
-
+@media (max-width: 375px) {
+    
 }
