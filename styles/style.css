@@ -322,7 +322,7 @@ ul, li {
 
 img {
   max-width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 a {
@@ -346,6 +346,7 @@ button {
   margin-top: 25px;
   text-transform: uppercase;
   border-style: none;
+  overflow: hidden;
 }
 
 h1 {
@@ -1029,42 +1030,17 @@ button [type=submit] {
   padding: 20px;
 }
 
-/* Gallery Section Styling */
 .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background-color: white;
+  padding: 50px 0;
 }
 .gallery ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.gallery ul li {
-  width: calc(100%/3 - 20px);
-  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
-/* Foot Section Styling */
+/* Footer Section Styling */
 footer {
   background-color: #4f4f4f;
   text-align: center;
@@ -1202,21 +1178,7 @@ footer p {
   }
 
   .gallery {
-    height: 50vh;
-  }
-  .gallery ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .gallery ul li img {
-    display: inline-block;
-  }
-
-  .special {
-    display: none;
+    padding: 25px 0;
   }
 
   /* Blog Section */
@@ -1244,6 +1206,7 @@ footer p {
   .blogContainer .asideFlex {
     width: 100%;
     text-align: center;
+    margin-right: 0;
   }
   .blogContainer .asideFlex img {
     margin: 0 auto;
@@ -1254,11 +1217,13 @@ footer p {
 
   .aboutSophie {
     margin: 0;
+    margin-right: 0;
   }
 
   .blogContainer .articleFlex {
     width: 100%;
     margin: 0;
+    margin-left: 0;
   }
 
   .reviewContainer {
@@ -1332,13 +1297,14 @@ footer p {
             flex-direction: column;
   }
 
-  .imgContainer.doodle {
-    width: 80%;
-    margin: 0;
+  .aboutSection .textContainer.favThings {
+    padding: 0;
+    margin-left: 0;
   }
-  .imgContainer.doodle img {
-    -webkit-box-shadow: -30px 30px 1px #a82706;
-            box-shadow: -30px 30px 1px #a82706;
+
+  .aboutFlexContainer .textContainer {
+    padding: 0;
+    margin-right: 0;
   }
 
   .aboutFlexContainer .textContainer.favThings,
@@ -1348,14 +1314,27 @@ footer p {
     text-align: center;
   }
 
+  .imgContainer.doodle {
+    width: 80%;
+    margin: 0;
+  }
+  .imgContainer.doodle img {
+    -webkit-box-shadow: -10px 30px 1px #a82706;
+            box-shadow: -10px 30px 1px #a82706;
+  }
+
   .imgContainer.umbrellas {
     width: 80%;
     margin: 0;
   }
   .imgContainer.umbrellas img {
-    -webkit-box-shadow: 30px 30px 1px #f6a823;
-            box-shadow: 30px 30px 1px #f6a823;
+    -webkit-box-shadow: 10px 30px 1px #f6a823;
+            box-shadow: 10px 30px 1px #f6a823;
     margin-top: 25px;
+  }
+
+  button input {
+    overflow: hidden;
   }
 
   .servicesSection .flexContainer {
@@ -1364,10 +1343,11 @@ footer p {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin: 0;
+    text-align: center;
   }
   .servicesSection .flexContainer .container {
     width: 100%;
-    margin: 0;
+    margin-left: 0;
   }
 
   .iconBox {
@@ -1389,5 +1369,63 @@ footer p {
   .journeySection article {
     width: 100%;
     margin: 0;
+    text-align: center;
+  }
+  .journeySection .imgContainer {
+    width: inherit;
+  }
+}
+@media (max-width: 375px) {
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .bioSection {
+    height: inherit;
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .aboutFlexContainer {
+    margin-top: 100px;
+  }
+
+  .doodle, .umbrellas {
+    height: 20vh;
+  }
+
+  .gallery ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutSophie {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .recentPosts {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .reviewContainer .julia .imgContainer, .reviewContainer .jeremy .imgContainer {
+    display: none;
+  }
+
+  input {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  textarea {
+    width: 100%;
   }
 }

@@ -164,7 +164,6 @@
     .flexContainer {
         display: flex;
         margin-bottom: 40px;
-     
         .container {
             width: calc(50% - 25px);
             margin-left: 25px;
@@ -202,29 +201,16 @@
         padding: 20px;
     }
 }
-
-/* Gallery Section Styling */ 
 .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     background-color: white;
+    padding: 50px 0;
     ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        li {
-            width: calc(100%/3 - 20px);
-            margin: 0 10px;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
     }
 }
-
-/* Foot Section Styling */ 
+/* Footer Section Styling */ 
 footer {
     background-color: $accentGrey;
     text-align: center;
@@ -358,17 +344,7 @@ footer {
         }
     }
     .gallery {
-        height: 50vh;
-        ul {
-            justify-content: center;
-            flex-wrap: wrap;
-            li img {
-                display: inline-block;
-            }
-        }
-    }
-    .special {
-        display: none;
+        padding: 25px 0;
     }
 
     /* Blog Section */
@@ -393,6 +369,7 @@ footer {
         .asideFlex {
             width: 100%;
             text-align: center;
+            margin-right: 0;
             img {
                 margin: 0 auto;
             }
@@ -403,11 +380,13 @@ footer {
     }
     .aboutSophie {
         margin: 0;
+        margin-right: 0;
     }
     .blogContainer {
         .articleFlex {
             width: 100%;
             margin: 0;
+            margin-left: 0;
         }
     }
     .reviewContainer {
@@ -447,7 +426,6 @@ footer {
 }
 }
 
-
 @media (max-width: 650px) {
     h1 {
     font-size: 3.8rem;
@@ -463,19 +441,27 @@ footer {
     .titleContainer img {
         display: none;
     }
+
+    //IS THIS THE HOR SCROLL? 
     .aboutSection {
         .aboutFlexContainer {
             flex-direction: column;
         }
     }
-    .imgContainer.doodle {
-        width: 80%;
-        margin: 0;
-        img {
-            box-shadow: -30px 30px 1px $accentRust;
+    .aboutSection {
+        .textContainer.favThings {
+            padding: 0;
+            margin-left: 0;
         }
     }
-    .aboutFlexContainer{
+
+    .aboutFlexContainer {
+        .textContainer {
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+        .aboutFlexContainer{
         .textContainer.favThings,
         .textContainer.travelled {
             width: 80%;
@@ -483,21 +469,36 @@ footer {
             text-align: center;
         }
     }
+
+    .imgContainer.doodle {
+        width: 80%;
+        margin: 0;
+        img {
+            box-shadow: -10px 30px 1px $accentRust;
+        }
+    }
+
     .imgContainer.umbrellas {
         width: 80%;
         margin: 0;
         img {
-            box-shadow: 30px 30px 1px $primary;
+            box-shadow: 10px 30px 1px $primary;
             margin-top: 25px;
+        }
+    }
+    button {
+        input {
+            overflow: hidden;
         }
     }
     .servicesSection {
         .flexContainer {
             flex-direction: column-reverse;
             margin: 0;
+            text-align: center;
             .container {
                 width: 100%;
-                margin: 0;
+                margin-left: 0;
             }
         }
     }
@@ -513,10 +514,59 @@ footer {
         article {
             width: 100%;
             margin: 0;
+            text-align: center;
+        }
+        .imgContainer {
+            width: inherit;
         }
     }
 }
 
 @media (max-width: 375px) {
+    h1{
+        padding: 0;
+        margin: 0;
+    }
+    .bioSection {
+        height: inherit;
+        margin: 50px 0;
+        text-align: center;
+    }
+    .aboutFlexContainer{
+        margin-top: 100px;
+    }
+
+    .doodle, .umbrellas {
+        height: 20vh;
+    }
+    .gallery {
+        ul {
+        display: flex;
+        flex-direction: column;    
+        }
+    }
+    .aboutSophie {
+        margin-right: 0;
+        padding: 10px;
+    }
+    .recentPosts {
+        margin-right: 0;
+        padding: 10px;
+    }
+    .reviewContainer {
+        .julia, .jeremy {
+            .imgContainer {
+                display: none;
+            }
+        }
+    }
+    input {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 10px;
+        }
+    textarea {
+        width: 100%;
+    }
     
 }
