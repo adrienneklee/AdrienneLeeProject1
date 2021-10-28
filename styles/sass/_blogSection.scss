@@ -13,7 +13,7 @@ header.headerBlog {
             margin: 0;
             position: absolute;
             bottom: -70px;
-            left: 140px;
+            left: 120px;
         }
     }
 }
@@ -114,6 +114,9 @@ aside li::before {
     }
 }
 
+.italic {
+    font-style: italic;
+}
 
 article {
     p {

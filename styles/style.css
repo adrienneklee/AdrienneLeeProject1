@@ -303,7 +303,6 @@ span {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  border: 1px solid red;
 }
 
 html {
@@ -568,7 +567,7 @@ header.headerBlog .background h1 {
   margin: 0;
   position: absolute;
   bottom: -70px;
-  left: 140px;
+  left: 120px;
 }
 
 .headerNav {
@@ -674,6 +673,10 @@ aside li::before {
   font-weight: normal;
   padding-top: 10px;
   margin-left: 10px;
+}
+
+.italic {
+  font-style: italic;
 }
 
 article p {
@@ -938,7 +941,7 @@ button [type=submit] {
   margin-top: 50px;
 }
 
-/* Chose to use Box-Shadows over Positioning for the following section to improve the responsive design user experience as the page scales down without elements breaking out of containers */
+/* I chose to use Box-Shadows over Positioning for the following section to improve the responsive design user experience as the page scales down.  I found positioning these parts to be exactly like the design led to the elements having a very fractured journey when the screen sized down. */
 .doodle {
   width: 40%;
 }
@@ -1099,13 +1102,13 @@ footer p {
     margin: 25px 0px 25px 50px;
   }
 
-  /*Blog Page*/
+  /* Blog Page Media Queries (Max-Width: 980px) */
   header.headerBlog .background h1 {
     left: 92px;
     bottom: -57px;
   }
 
-  /*Contact Page*/
+  /* Contact Page Media Queries (Max-Width: 980px)*/
   header.headerContact .background h1 {
     left: 96px;
     bottom: -100px;
@@ -1123,8 +1126,12 @@ footer p {
     height: 70vh;
   }
 
+  .titleContainer h1 {
+    margin-top: 50px;
+  }
+
   .hideMobile {
-    visibility: hidden;
+    display: none;
   }
 
   .headerNav {
@@ -1143,7 +1150,7 @@ footer p {
 
   .headerContent .imgContainer {
     height: 300px;
-    width: 250px;
+    width: 100%;
   }
   .headerContent .imgContainer img {
     -webkit-box-shadow: 5px 5px 1px white;
@@ -1193,7 +1200,7 @@ footer p {
     padding: 25px 0;
   }
 
-  /* Blog Section */
+  /* Blog Section Media Queries (Max-Width: 768px) */
   .headerBlog .headerNav {
     height: 10vh;
     position: relative;
@@ -1225,11 +1232,24 @@ footer p {
   }
   .blogContainer .asideFlex aside {
     text-align: center;
+    padding: 20px;
   }
 
   .aboutSophie {
     margin: 0;
     margin-right: 0;
+  }
+
+  .asideFlex .recentPosts {
+    margin-right: 0;
+  }
+
+  .recentPosts ul {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .recentPosts ul li {
+    text-align: left;
   }
 
   .blogContainer .articleFlex {
@@ -1246,7 +1266,7 @@ footer p {
     padding: 5px;
   }
 
-  /* Contact Section */
+  /* Contact Section Media Queries (Max-Width: 768px) */
   .headerContact .headerNav {
     height: 10vh;
     position: relative;
@@ -1256,7 +1276,7 @@ footer p {
   .headerContact .headerNav i {
     position: absolute;
     top: 25px;
-    right: 0px;
+    right: 25px;
     font-size: 1.6rem;
     color: black;
     visibility: visible;
@@ -1272,6 +1292,7 @@ footer p {
     width: 100%;
     margin-bottom: 25px;
     text-align: center;
+    margin-right: 0;
   }
   .contactContainer .formContainer {
     width: 100%;
@@ -1298,20 +1319,34 @@ footer p {
     margin-top: 0;
   }
 
+  .headerContent .imgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .titleContainer img {
     display: none;
   }
 
   .aboutSection .aboutFlexContainer {
+    height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 
   .aboutSection .textContainer.favThings {
     padding: 0;
     margin-left: 0;
+    margin-top: 75px;
   }
 
   .aboutFlexContainer .textContainer {
@@ -1322,12 +1357,12 @@ footer p {
   .aboutFlexContainer .textContainer.favThings,
 .aboutFlexContainer .textContainer.travelled {
     width: 80%;
-    margin-top: 50px;
     text-align: center;
   }
 
   .aboutFlexContainer .textContainer.travelled {
     margin-right: 0;
+    margin-top: 0;
   }
 
   .imgContainer.doodle {
@@ -1347,10 +1382,6 @@ footer p {
     -webkit-box-shadow: 10px 30px 1px #f6a823;
             box-shadow: 10px 30px 1px #f6a823;
     margin-top: 25px;
-  }
-
-  button input {
-    overflow: hidden;
   }
 
   .servicesSection .flexContainer {
@@ -1390,13 +1421,39 @@ footer p {
   .journeySection .imgContainer {
     width: inherit;
   }
-}
-@media (max-width: 375px) {
-  h1 {
-    padding: 0;
-    margin: 0;
+
+  /* Blog Section Media Queries (Max-Width: 650px) */
+  header.headerBlog .background h1 {
+    bottom: -40px;
+    left: 70px;
   }
 
+  .recentPosts ul {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .recentPosts ul li {
+    text-align: left;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+  }
+
+  /* Contact Section Media Queries (Max-Width: 650px) */
+  header.headerContact .background h1 {
+    bottom: -40px;
+    left: 70px;
+  }
+}
+@media (max-width: 375px) {
   .bioSection {
     height: inherit;
     margin: 50px 0;
@@ -1404,12 +1461,8 @@ footer p {
   }
 
   .aboutSection .aboutFlexContainer {
+    height: 80vh;
     margin-top: 0;
-  }
-
-  .aboutFlexContainer .textContainer.favThings,
-.aboutFlexContainer .textContainer.travelled {
-    margin-top: 75px;
   }
 
   .doodle, .umbrellas {
@@ -1430,27 +1483,22 @@ footer p {
             flex-direction: column;
   }
 
-  .aboutSophie {
-    margin-right: 0;
-    padding: 10px;
-  }
-
+  /* Blog Section Media Queries (Max-Width: 375px) */
   .recentPosts {
     margin-right: 0;
     padding: 10px;
+  }
+  .recentPosts ul {
+    width: 100%;
   }
 
   .reviewContainer .julia .imgContainer, .reviewContainer .jeremy .imgContainer {
     display: none;
   }
 
-  .reviewContainer .formContainer input {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 10px;
-    display: block;
-  }
-  .reviewContainer .formContainer textarea {
-    width: 100%;
+  /* Contact Section Media Queries (Max-Width: 375px) */
+  header.headerContact .background h1 {
+    bottom: -80px;
+    left: 80px;
   }
 }
