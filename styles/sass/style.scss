@@ -249,14 +249,8 @@ footer {
             }
         }
     }
-
-    .contactContainer aside {
-        height: inherit;
-        width: calc(100%/3 - 25px);
-        padding: 40px 10px;
-        margin-right: 25px;
-    }
 }
+
 
 @media (max-width: 768px) {
     .headerMain {
@@ -568,6 +562,7 @@ footer {
             }
         }
     }
+
     .recentPosts {
         ul {
             width: 60%;
@@ -600,6 +595,12 @@ footer {
 }
 
 @media (max-width: 375px) {
+    h1 {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin: 0;
+    }
+
     .bioSection {
         height: inherit;
         margin: 50px 0;
@@ -607,7 +608,7 @@ footer {
     }
     .aboutSection {
         .aboutFlexContainer {
-            height: 80vh;
+            height: 100vh;
             margin-top: 0;
         }
     }
@@ -637,6 +638,7 @@ footer {
             width: 100%;
         }
     }
+
     .reviewContainer {
         .julia, .jeremy {
             .imgContainer {
@@ -654,5 +656,4 @@ footer {
             }
         }
     }
-    
 }

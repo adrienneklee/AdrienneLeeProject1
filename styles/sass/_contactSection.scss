@@ -13,9 +13,21 @@ header.headerContact {
             position: absolute;
             bottom: -100px;
             left: 140px;
+            }
         }
     }
-}
+
+    .logo {
+        padding: 0;
+    }
+
+    .headerContact {
+        ul {
+            li {
+                font-size: 0.8rem;
+            }
+        }
+    }
 
 .headerNav {
     position: relative;
@@ -28,7 +40,6 @@ header.headerContact {
         font-size: 1.6rem;
         color: black;
         visibility: hidden;
-
     }
 }
 
@@ -39,10 +50,10 @@ header.headerContact {
 }
 
 aside {
-    width: calc(100%/3 - 50px);
-    height: 35vh;
-    padding: 40px 30px;
-    margin-right: 50px;
+    width: calc(100%/3 - 25px);
+    height: 50%;
+    padding: 20px;
+    margin-right: 25px;
     background-color: white;
     i {
         color: $primary;

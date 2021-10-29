@@ -5,6 +5,7 @@
     font-weight: bold;
     letter-spacing: 1px;
 }
+
 //  Bumped up h1 font to be more in line with style guide
 h1 {
     @include fontSize(6rem);
@@ -27,8 +28,8 @@ h3 {
 h4 {
     @include fontSize(1.2rem);
     text-transform: uppercase;
-
 }
+
 /* Scaled down paragraph font size to be more in line with provided design*/ 
 p {
     @include fontSize(0.8rem);
@@ -47,3 +48,4 @@ span {
     @include fontSize(1rem);
     color: $fontAccent;
 }
+

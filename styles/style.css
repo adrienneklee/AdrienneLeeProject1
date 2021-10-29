@@ -322,7 +322,7 @@ ul, li {
 
 img {
   max-width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 a {
@@ -525,7 +525,8 @@ nav ul li {
   text-align: center;
   padding: 10px 20px;
 }
-nav ul li .highlight {
+
+.highlight {
   color: #f0efed;
 }
 
@@ -653,7 +654,7 @@ header.headerBlog .background h1 {
 aside li::before {
   content: "●";
   color: #f6a823;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .recentPosts {
@@ -750,6 +751,14 @@ header.headerContact .background h1 {
   left: 140px;
 }
 
+.logo {
+  padding: 0;
+}
+
+.headerContact ul li {
+  font-size: 0.8rem;
+}
+
 .headerNav {
   position: relative;
   top: 0;
@@ -773,10 +782,10 @@ header.headerContact .background h1 {
 }
 
 aside {
-  width: calc(100%/3 - 50px);
-  height: 35vh;
-  padding: 40px 30px;
-  margin-right: 50px;
+  width: calc(100%/3 - 25px);
+  height: 50%;
+  padding: 20px;
+  margin-right: 25px;
   background-color: white;
 }
 aside i {
@@ -1113,13 +1122,6 @@ footer p {
     left: 96px;
     bottom: -100px;
   }
-
-  .contactContainer aside {
-    height: inherit;
-    width: calc(100%/3 - 25px);
-    padding: 40px 10px;
-    margin-right: 25px;
-  }
 }
 @media (max-width: 768px) {
   .headerMain {
@@ -1454,6 +1456,12 @@ footer p {
   }
 }
 @media (max-width: 375px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.8rem;
+    margin: 0;
+  }
+
   .bioSection {
     height: inherit;
     margin: 50px 0;
@@ -1461,7 +1469,7 @@ footer p {
   }
 
   .aboutSection .aboutFlexContainer {
-    height: 80vh;
+    height: 100vh;
     margin-top: 0;
   }
 

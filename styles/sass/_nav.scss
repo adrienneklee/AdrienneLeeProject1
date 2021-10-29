@@ -11,12 +11,13 @@ nav {
             text-transform: uppercase;
             text-align: center;
             padding: 10px 20px;
-            .highlight {
-                color: $accentWhite;
-                }
             }
         }
     }
+
+.highlight {
+    color: $accentWhite;
+}
 
 .logo {
     @include fontSize(2rem);

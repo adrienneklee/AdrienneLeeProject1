@@ -29,7 +29,6 @@ header.headerBlog {
         font-size: 1.6rem;
         color: black;
         visibility: hidden;
-
     }
 }
 
@@ -50,7 +49,7 @@ header.headerBlog {
         height: inherit;
         span {
             font-size: 0.8rem;
-        }
+            }
         }
     }
     .articleFlex {
@@ -92,7 +91,7 @@ header.headerBlog {
 aside li::before {
     content: '\25CF';
     color: $primary;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 .recentPosts {
@@ -160,7 +159,7 @@ article {
         font-style: normal;
         margin: 0;
         padding: 5px 20px;
-    }
+        }
     }
 }
 
