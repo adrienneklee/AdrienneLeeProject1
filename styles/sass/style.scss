@@ -33,6 +33,11 @@
     }
 }
 
+// new-branch feature: hide dropdown menu in desktop version
+.hamburgerNav ul {
+    display: none;
+}
+
 .headerContent {
     margin-top: 50px;
     display: flex;
@@ -279,6 +284,11 @@ footer {
         color: black;
         visibility: visible;
         }
+    }
+
+    // new-branch feature: hide dropdown menu in desktop version
+    .hamburgerNav ul {
+        visibility: visible;
     }
 
     .headerContent .imgContainer {

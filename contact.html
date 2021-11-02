@@ -53,7 +53,7 @@
             <address>M5V2O5</address>
         </aside>
 
-        <form class="formContainer" action="#">
+        <form class="formContainer getInTouch" action="#">
         
             <label for="userName" class="srOnly">Name</label>
             <input type="text" id="userName" name="name" placeholder="Name">
@@ -71,5 +71,19 @@
     <footer>
         <p>Copyright © 2018 HackerYou</p>
     </footer>
+<!-- link to external JS sheet-->
+<script>
+
+const formElement = document.querySelector('.getInTouch');
+
+formElement.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log(event);
+
+
+});  
+
+</script>    
+<!-- <link rel="scriptsheet" href="./script.js"> -->
 </body>
 </html>

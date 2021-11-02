@@ -881,6 +881,10 @@ button [type=submit] {
   visibility: hidden;
 }
 
+.hamburgerNav ul {
+  display: none;
+}
+
 .headerContent {
   margin-top: 50px;
   display: -webkit-box;
@@ -1147,6 +1151,10 @@ footer p {
     right: 25px;
     font-size: 1.6rem;
     color: black;
+    visibility: visible;
+  }
+
+  .hamburgerNav ul {
     visibility: visible;
   }
 
