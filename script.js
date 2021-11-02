@@ -6,10 +6,23 @@ const formElement = document.querySelector('.getInTouch');
 
 formElement.addEventListener('submit', function (event) {
     event.preventDefault();
-    console.log(event);
 
-    const inputElement = document.querySelectorAll('input');
-    console.log(inputElement);
+    const nameInput = document.querySelector('input[type=text]');
+    const userName = nameInput.value;
 
-    alert(`Thank you for your message!`);
+    const emailInput = document.querySelector('input[type=email]');
+    const userEmail = emailInput.value;
+
+    const messageInput = document.querySelector('textarea');
+    const userMessage = messageInput.value;
+
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+
+
+    console.log(userName, userEmail, userMessage);
+    alert(`Thank you for your message! 
+Sophie will get back to you soon! 💁‍♀️`);
+
 });
