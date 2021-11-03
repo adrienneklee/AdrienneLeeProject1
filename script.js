@@ -20,8 +20,6 @@ formElement.addEventListener('submit', function (event) {
     emailInput.value = '';
     messageInput.value = '';
 
-
-    console.log(userName, userEmail, userMessage);
     alert(`Thank you for your message! 
 Sophie will get back to you soon! 💁‍♀️`);
 
